@@ -2,4 +2,8 @@
     <string name="app_name">MyInstagram</string>
     <string name="parse_app_id">1d47a8bf93be6105b826e6f20131f0e140367da2</string>
     <string name="parse_client_key">e89c423f92b90ae52109c0e1e7fc441724d7fd3b</string>
+    <string name="title_activity_home">Home</string>
+    <string name="sign_in_label">
+        <u>or Sign in</u>
+    </string>
 </resources>

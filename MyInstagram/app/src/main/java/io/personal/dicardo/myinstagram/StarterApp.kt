@@ -1,7 +1,6 @@
 package io.personal.dicardo.myinstagram
 
 import android.app.Application
-import android.util.Log
 import com.parse.*
 
 
@@ -18,24 +17,6 @@ class StarterApp : Application() {
             .server("http://ec2-18-188-200-106.us-east-2.compute.amazonaws.com/parse/")
             .build())
 
-        val parseObject = ParseObject("Tweet")
-        parseObject.put("username", "someuser")
-        parseObject.put("text", "lasdlasdlsd")
-
-        parseObject.saveEventually {
-            if (it != null) {
-                Log.e("PARSE", it.message, it)
-            } else {
-                var query :ParseQuery<ParseObject> = ParseQuery("Tweet")
-                query.getFirstInBackground { obj, e ->
-                    Log.e("PARSE", "ex", e)
-                    obj.put("text", "asasdasdsd")
-                    obj.saveEventually()
-                }
-            }
-        }
-
-        ParseUser.enableAutomaticUser()
         val defaultACL = ParseACL()
         defaultACL.publicReadAccess = true
         defaultACL.publicWriteAccess = true
