@@ -18,7 +18,7 @@ class Home : AppCompatActivity() {
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
 
-
+super.onRequestPermissionsResult(requestCode, permissions, grantResults)	
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
